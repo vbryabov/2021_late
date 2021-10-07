@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <title>グラフ作成時の注意</title>
+    <link rel="stylesheet" type="text/css" href="../TIPS/ecs1.css">
+  </head>
+  <body>
+
+    <h1>複雑系科学演習
+      　グラフ作成時の注意</h1>
+     
+    <h2>グラフ作成時の注意</h2>
+    <hr>
+	
+    <p>グラフを作成する際には、注意しなければならないことがあります。それは<br>
+      <font color="red"><strong><u>他人が内容を理解できるように作成すること</u></strong></font> です。<br>
+      （もちろん、これはグラフに限らず、レポート・報告書・論文などすべてに通じます。）
+    </p>
+    <p>
+      最も基本、かつ作成時忘れがちなのは
+    </p>
+      <div>
+	<ol>
+	<li>縦軸・横軸は何を表しているか。(軸のラベル)</li>
+	<li>複数のグラフを重ねて書いているならば、どの線が何のグラフを表しているか。(グラフのタイトル)</li>
+	<li>グラフ全体は何を表しているか。(グラフ全体のキャプション)</li>
+      </ol>
+    </div>
+      <p>がわかるように書かれているか、ということです。
+    </p>
+    <p>	
+      以下に、gnuplot使用時のグラフ作成例を挙げます。参考にしてください。
+    </p>
+    <hr>
+
+    <img src="graph_gnuplot.png" alt="GNUPLOTを用いたグラフ" width="100%">
+      <TABLE width="80%" bgcolor="khaki">
+	<tr><td>
+	  １．</td><td>軸のラベル（見出し）を書く
+（Gnuplot上あるいは手書きなどで）
+	  </td>
+	</tr>
+	<tr><td></td><td><font size="-1">
+	  単位があるときには、単位も必ず書く
+	</font>
+	</td></tr>
+	<tr><td>
+	２．</td><td>各グラフのタイトル（凡例：何を表しているか）を書く
+（Gnuplot上あるいは手書きなどで）
+	</td>
+	</tr>
+	<tr><td></td><td><font size="-1">
+	  グラフが一本の時には、書かなくてもよい。
+	</font></td></tr>
+	<tr><td>
+	３．</td><td>グラフのキャプション（題名：内容）を書く
+（Writer/TeX 上あるいは手書きなどで）
+	</td></tr>
+	<tr><td></td><td><font size="-1">
+	  その文書中に図が複数あるときには、通し番号をつける。<br>
+	  グラフ等の図のときには図の下に、表のときには表の上に書く
+	</font></td></tr>
+      </TABLE>
+      ※ラベル・タイトルの書き方等は<a href="../HowtoGNUPLOT/Toc.html">GNUPLOT の使い方</a>参照のこと
+    
+      <hr>
+    <a href="../c_test.html">演習環境の確認のページへ戻る</a>　　
+       
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<title>How to use GNUPLOT: 12</title>
+<body>
+12. より見やすいグラフにするための技法をいくつか学んでいこう。<br>
+<!--<font color="maroon">Let us study some techniques to create more understadable graphs.</font>--><p>
+関数グラフの表示の場合と同じように、縦・横軸の描画範囲を指定することも出来る。<br>
+例として、時刻２０から４０までのX(t)を直線で表示してみよう。<br>
+<!--<font color="maroon">You can give the range of the ordinate and the abscissa like function graphs.</font>--><p>
+<tt>plot [20:40] "Lorenz.txt" using 1:2 with lines</tt><p>
+<img src="imgs/Lorenz-gp06.gif"><p>
+また方眼モードも同様に設定出来る。<br>
+<!--<font color="maroon">Graph paper mode is also available for data plot.</font>--><p>
+<tt>set grid</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/Lorenz-gp07.gif"><p>
+グラフの横軸や縦軸が何を表すのかを表示出来ると便利である。<br>
+各軸の見出しはラベル(label)と呼ばれ、次のように片方のみ、または両方同時に指定できる。<br>
+<!--<font color="maroon">Labels for the ordinate and the abscissa are usefule.<br>
+You can define label strings for the ordinate and the abscissa respectively.</font>--><p>
+<tt>set xlabel "TIME"</tt><br>
+<tt>set ylabel "X(t)"</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/Lorenz-gp08.gif"><p>
+ラベルを書き間違えた場合・変更したい場合は、もう一度<tt> set *label "..." </tt>を実行してから、<br>
+replotすればよい。描画時にはいつも最新の設定が反映される。<br>
+<!--<font color="maroon">In order to correct label strings, you only have to define again like <tt>set *label "..."</tt>.<br>
+And then <tt>replot</tt>. When graph changed, most recent settings are shown.</font>--><p>
+一度指定したラベルを消すには、次のように空文字列を与える。<br>
+<!--<font color="maroon">If you want to erase a label once you gave, type the following not like <tt> set noxlabel</tt>.</font>--><p>
+<tt>set xlabel ""</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/Lorenz-gp09.gif"><p>
+このほか<tt> set log y </tt>により対数目盛に変えてプロットすることももちろん可能だが、<br>
+教材データは正の値に限られていないので、ここでは省略する。<br>
+<!--<font color="maroon">In addition, you can utilize logarithmic scale for data plot by <tt>set log y</tt>.<br>
+But we don't try it here since our teaching material contains negative values<br>
+so it cannot be plotted logarithmically.</font>--><p>
+<a href="HowtoGNUPLOT-14.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-16.html">次へ(next)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<title>How to use GNUPLOT: 8</title>
+<body>
+8. そのほか初等関数をC言語と同様な記法で描画出来る。<br>
+<!--<font color="maroon">Some other mathematical functions are also given by the same notations as C-langeage.</font>--><p>
+例１ <!--<font color="maroon">Example 1</font>-->：<tt> plot sin(x)</tt><p>
+<img src="imgs/plot-08.gif"><p>
+例２ <!--<font color="maroon">Example 2</font>-->：<tt> plot [-1:1] exp(x)</tt><p>
+<img src="imgs/plot-09.gif"><p>
+<b>応用問題：</b>原点中心、半径1の円周をグラフとして描いてみよ。<br>
+<b>ヒント：</b>平方根は<tt>sqrt(x)</tt>と言う命令を使う。<br>
+<!--<font color="maroon"><b>applied question:</b> Draw the circle of radius 1 whose center is at origin.<br>
+<b>Hint:</b> Instruction of square root is <tt>sqrt(x)</tt>.</font>--><p>
+
+ほかに利用出来る関数の一覧は<tt> help functions </tt>と入力するとヘルプウィンドウが開いて<br>
+リストが表示される。物理・工学で時々出会うガンマ関数や誤差関数なども描画可能だ。<br>
+<!--<font color="maroon">You can show the list of available functions by typing <tt>help functions</tt> as help window.<br>
+Gamma function and error function are also available<br>
+which we sometimes need to calculate in technological and physical considerations.</font>--><p>
+<img src="imgs/plot-08a.gif"><p>
+上の例で描いたsin関数（正弦関数）のところをクリックすると、関数の呼び出し方の詳細が表示される。<br>
+<!--<font color="maroon">Click at sin in help window, you can see how to call this function in detail.</font>--><p>
+<img src="imgs/plot-08b.gif"><p>
+引数である角度は「ラジアン」または「度数」のどちらも利用できると記されている。<br>
+どちらの表し方を用いるのかは、やはりsetコマンドでモード設定する。<br>
+<!--<font color="maroon">You can use both radian and degree to give the angle arguments.<br>
+And which unit you use is chosen by set command.</font>--><p>
+<ul>
+<li><tt>set angles radian </tt>以後の入力では角度値をラジアンと解釈する。<font color="maroon">radian is available.</font></li>
+<li><tt>set angles degree </tt>以後の入力では角度値を度数表示と解釈する。<font color="maroon">degree is available.</font></li>
+</ul>
+<b>練習問題１：</b>ラジアンモードにして<tt> plot [0:2*pi] sin(x) </tt>を実行せよ。<br>
+<!--<font color="maroon"><b>Exersice 1:</b> Under radian mode, run <tt>plot [0:2*pi] sin(x)</tt></font>--><p>
+<b>小技：</b><tt> pi </tt>は円周率3.1415...として処理される。この例では<tt> 2*pi </tt>＝２π だ。<br>
+<!--<font color="maroon"><b>simple trick:</b> <tt>pi</tt> means the circular constant 3.1415... In this example <tt>2*pi</tt> equals 2π</font>--><p>
+<b>練習問題２：</b>度数モードにして<tt> plot [0:360] sin(x) </tt>を実行せよ。<br>
+<!--<font color="maroon"><b>Exercise 2:</b> Under degree mode, run <tt>plot [0:360] sin(x)</tt></font>--><p>
+どちらも正弦関数のちょうど１周期分が表示されたか？<br>
+<!--<font color="maroon">Can you see just one period of sinusoidal function as the solutions of both exercises ?</font>--><p>
+<a href="HowtoGNUPLOT-10.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-12.html">次へ(next)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</href>

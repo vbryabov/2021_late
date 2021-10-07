@@ -1,0 +1,44 @@
+<html>
+<title>How to use GNUPLOT 13.5</title>
+<body>
+13.5 splotを用いて曲面（平面） z=f(x,y) を描くことが出来る。<br>
+<!--<font color="maroon">Surface plot is available by <tt>splot</tt>.</font>--><br>
+例：平面 z=2x+3y を描く。<br>
+<!--<font color="maroon">Example: display the plane z=2x+3y.</font>--><br>
+<tt>splot 2*x+3*y</tt><p>
+<img src="imgs/plot-16.5a.gif"><p>
+
+この平面と z=0 との共通部分（直線）を調べよう。<br>
+<!--<font color="maroon">Let us observe the intersection (line) of the above plane and z=0.</font>--><br>
+<tt>splot 2*x+3*y,0</tt><br>
+<img src="imgs/plot-16.5b.gif"><p>
+
+このままでは平面が透けて分かりにくい。陰線処理を施してみる。<br>
+<!--<font color="maroon">The following command enables hidden line removal.</font>--><br>
+<tt>set hidden3d</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/plot-16.5c.gif"><p>
+
+GNUPLOTが算出しているのは格子点のみである。格子点の密度を上げてみる。<br>
+<!--<font color="maroon">You can increase density of grid point for surface plot.</font>--><br>
+<tt>show isosamples</tt><br>
+デフォルト値は x軸・y軸共に10点である。これを倍にする。<br>
+<!--<font color="maroon">Default number of grid points is 10x10. Here we double this.</font>--><br>
+<tt>set isosamples 20,20</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/plot-16.5d.gif"><p>
+
+曲面の例として原点からの距離を表す z=f(x,y)=√(x^2+y^2) を描いてみる。<br>
+<!--<font color="maroon">Another example; display the distance function from the origin.</font>--><br>
+<tt>splot sqrt(x*x+y*y)</tt><p>
+<img src="imgs/plot-16.5e.gif"><p>
+
+<b>応用問題：</b>減衰振動 x(t)=exp(-at)sin(t) (a>0) の振動の様子がパラメータ a の値によって<br>
+どのように変化するか曲面表示を用いて観察せよ。<br>
+<!--<font color="maroon"><b>applied question:</b> observe how the damped oscillation x(t)=exp(-at)sin(t) (a>0) varies depending on parameter a.</font-->><br>
+ヒント：時刻 t をGNUPLOTの x軸に、パラメータ a を y軸として曲面表示する。<br>
+<!--<font color="maroon">Hint: assign time to x-axis of GNUPLOT and parameter a to y-axis.</font>--><p>
+
+<a href="HowtoGNUPLOT-16.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-17.html">次へ(next)</a>・<a href="Toc.html">目次(toc)</a>
+</body>
+</html>

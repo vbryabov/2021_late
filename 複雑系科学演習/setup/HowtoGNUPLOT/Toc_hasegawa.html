@@ -1,0 +1,42 @@
+<html>
+  <title>How to configure and use GNUPLOT</title>
+  <body>
+    <center>
+      <hr>
+      <font size=5>GNUPLOTの設定と使い方 / How to configure and use GNUPLOT</font>
+      <hr>
+    </center>
+    <b>設定 <font color="maroon">How to set up</font></b><br>
+    <ul>
+      <li><a href="HowtoGNUPLOT-00.html">作業フォルダの設定</a> <font color="maroon">Set work folder</font></li>
+      <li><a href="HowtoGNUPLOT-01.html">フォントサイズの設定</a> <font color="maroon">Choose font size</font></li>
+      <li><a href="HowtoGNUPLOT-03.html">設定の記録</a> <font color="maroon">Save initial state</font>  wgnuplot.ini</li>
+    </ul><p>
+      <b>使い方 <font color="maroon">How to use</font></b><br>
+      <ul>
+	<li><a href="HowtoGNUPLOT-04.html">とにかくプロット</a> <font color="maroon">Simple plot at first</font> <tt>plot x</tt></li>
+	<li><a href="HowtoGNUPLOT-05.html">横軸の描画範囲の指定</a> <font color="maroon">Range of abscissa</font>  <tt>plot [AAA:BBB] x</tt></li>
+	<li><a href="HowtoGNUPLOT-06.html">縦軸の描画範囲の指定</a> <font color="maroon">Range of ordinate</font>  <tt>plot [AAA:BBB][CCC:DDD] x</tt></li>
+	<li><a href="HowtoGNUPLOT-07.html">方眼を入れる</a> <font color="maroon">graph paper mode</font>  <tt>set grid</tt></li>
+	<li><a href="HowtoGNUPLOT-08.html">方眼表示をやめる</a> <font color="maroon">eliminating grid</font>  <tt>set nogrid</tt></li>
+	<li><a href="HowtoGNUPLOT-09.html">複数のグラフを同時描画</a> <font color="maroon">plotting some graphs</font>  <tt>plot x,2*x</tt></li>
+	<li><a href="HowtoGNUPLOT-10.html">描画範囲を指定して複数のグラフを描く・応用問題</a> <font color="maroon">to plot some graphs in given area.</font>  <tt>plot [AAA:BBB] x,2*x</tt></li>
+	<li><a href="HowtoGNUPLOT-11.html">初等関数の描画・練習問題</a> <font color="maroon">To plot elemental functions</font>  <tt>plot sin(x)</tt></li>
+	<li><a href="HowtoGNUPLOT-12.html">対数目盛</a> <font color="maroon">logarithmic scale</font>  <tt>set log y</tt></li>
+	<li><a href="HowtoGNUPLOT-13.html">データプロットにチャレンジ</a> <font color="maroon">data plot</font> </li>
+	<li><a href="HowtoGNUPLOT-14.html">ローレンツアトラクタをプロットしてみる</a> <font color="maroon">To plot Lorenz attractor</font>  <tt>plot "Lorenz.dat"</tt></li>
+	<li><a href="HowtoGNUPLOT-15.html">縦･横軸に見出し(label)をつける</a>  <font color="maroon">To put axis label</font>  <tt>set xlabel "AAA"</tt></li>
+	<li><a href="HowtoGNUPLOT-16.html">３次元空間内に軌道を描画</a> <font color="maroon">Displaying trajectories in 3-dim. space</font>  <tt>splot "Lorenz.dat" using 2:3:4</tt></li>
+	<li><a href="HowtoGNUPLOT-16.5.html">２次元曲面の表示</a> </li>
+	<li><a href="HowtoGNUPLOT-17.html">データファイルと数学関数のグラフを同時に描画</a> <font color="maroon">To plot data and function graph</font>  <tt>plot "Lorenz.dat",sin(x)</tt></li>
+	<li><a href="HowtoGNUPLOT-18.html">凡例(title)の設定</a> <font color="maroon">To set title of each graph</font>  <tt>plot x title "y=x"</tt></li>
+	<li><a href="HowtoGNUPLOT-19.html">横軸の目盛の設定</a> <font color="maroon">To set ticks mode of abscissa</font>  <tt>set xtics AAA,BBB,CCC</tt></li>
+	<li><a href="HowtoGNUPLOT-20.html">小目盛の設定と方眼を入れる</a> <font color="maroon">Setting small ticks and grid</font> <tt>set mxtics AAA</tt></li>
+	<li><a href="HowtoGNUPLOT-21.html">任意の位置に目盛を入れる</a> <font color="maroon">To put tick at arbitral position</font>  <tt>set xtics("AAA" XXX,"BBB" YYY,...)</tt></li>
+	<li><a href="HowtoGNUPLOT-22.html">表示をクリップボードに取り込む</a> <font color="maroon">How to put graph into clipboard</font></li>
+	<li><a href="HowtoGNUPLOT-23.html">ディレクトリを扱うコマンド</a> <font color="maroon">How to change directory, etc.</font></li>
+      </ul>
+    <hr>
+    <a href="../index.html">複雑系科学演習 I のページへ戻る</a>　
+    </body>
+</html>
