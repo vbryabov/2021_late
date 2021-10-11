@@ -36,7 +36,7 @@ class Ctest3():
 
     def show_graph(self) -> None:
         file_path = 'images/'
-        plt.savefig(file_path + self.s, dpi=300)
+        plt.savefig(file_path + self.s, dpi=600)
         plt.show()
 
 
