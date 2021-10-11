@@ -35,8 +35,8 @@ class Ctest3():
         self.ax2.plot(x_array, ax2_array, marker='.', linestyle='None')
 
     def show_graph(self) -> None:
-        fname = 'images/' + self.s
-        plt.savefig(fname, dpi=64, facecolor='lightgray', tight_layout=True)
+        file_path = 'images/'
+        plt.savefig(file_path + self.s, dpi=300)
         plt.show()
 
 
