@@ -1,5 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
+
+
 class Ctest3():
     def __init__(self, r: float, file_name: str, index: int) -> None:
         self.r = r
@@ -21,8 +23,10 @@ class Ctest3():
         self.ax1.set_xlabel('$x_0$')
         ylabel = '$x_{200}$'
         self.ax1.set_ylabel(ylabel)
-        self.ax1.set_title('図{0}-1：初期値'.format(self.index) + '$x_0$のときの' + ylabel, fontname="MS Gothic")
-        self.ax1.plot(self.x, ax1_array, marker='.', linestyle='None', label='$r = $' + str(self.r))
+        self.ax1.set_title('図{0}-1：初期値'.format(self.index) +
+                           '$x_0$のときの' + ylabel, fontname="MS Gothic")
+        self.ax1.plot(self.x, ax1_array, marker='.',
+                      linestyle='None', label='$r = $' + str(self.r))
         self.ax1.legend(loc='best')
 
     def code_problem2(self) -> None:
@@ -38,13 +42,16 @@ class Ctest3():
                     x_array.append(i)
         self.ax2.set_xlabel('$x_0$')
         self.ax2.set_ylabel('$x_{i}$')
-        self.ax2.set_title('図{0}-2：初期値$x_0$のときの$x_i : (150 < i < 200)$'.format(self.index), fontname="MS Gothic")
-        self.ax2.plot(x_array, ax2_array, marker='.', linestyle='None', label='$r = $' + str(self.r))
+        self.ax2.set_title(
+            '図{0}-2：初期値$x_0$のときの$x_i : (150 < i < 200)$'.format(self.index), fontname="MS Gothic")
+        self.ax2.plot(x_array, ax2_array, marker='.',
+                      linestyle='None', label='$r = $' + str(self.r))
         self.ax2.legend(loc='best')
 
     def show_graph(self) -> None:
-        file_path = 'images/'
+        file_path = 'Week3/images/'
         plt.savefig(file_path + self.file_name, dpi=300)
+        plt.show()
 
 
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]

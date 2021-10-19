@@ -1,11 +1,12 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
+
 class PlotLogisticGraph():
     def __init__(self, x, r, s) -> None:
         self.x = x
         self.r = r
-        self.s =s
+        self.s = s
         self.xn = np.linspace(0, 1, 1000)
 
     def logistic(self) -> list:
@@ -24,7 +25,6 @@ class PlotLogisticGraph():
         plt.ylim(0, 1)
         plt.xlabel("$n$")
         plt.ylabel("$x_n$")
-    
 
     def plot_return_map(self):
         xn_array = []
@@ -48,10 +48,9 @@ class PlotLogisticGraph():
         plt.ylim(0, 1)
         plt.xlabel("$x_n$")
         plt.ylabel("$x_{n+1}$")
-    
 
     def show_graph(self) -> None:
-        file_path = 'images/'
+        file_path = 'Week2/images/'
         plt.savefig(file_path + self.s, dpi=600)
         plt.show()
 
@@ -62,4 +61,5 @@ for i in range(len(r)):
     demo = PlotLogisticGraph(x, r[i], 'ctest2_{}'.format(i + 1))
     demo.logistic()
     demo.plot_delta_time_graph()
+    # demo.plot_return_map()
     demo.show_graph()
