@@ -96,6 +96,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
+INPUT images/ctest3.png
+INPUT extractbb -B cropbox -O images/ctest3.png
 OUTPUT out/week2.aux
 INPUT week2.tex
 INPUT week2.tex
