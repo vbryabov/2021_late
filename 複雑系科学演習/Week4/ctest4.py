@@ -1,6 +1,12 @@
 from matplotlib import pyplot as plt
+import matplotlib
 import numpy as np
-
+# 日本語フォント用（Linux）
+matplotlib.rc('font', family='Noto Sans CJK JP')
+'''
+# 日本語フォント用（Windows）
+matplotlib.rc('font', family='MS Gothic')
+'''
 
 class Ctest4():
     def __init__(self) -> None:
@@ -37,8 +43,7 @@ class Ctest4():
         return x_array, r_array
 
     def code_problem1(self):
-        self.ax1.set_title('初期値$x_0 = 0.1$のときのロジスティック写像の分岐図',
-                           fontname="MS Gothic")
+        self.ax1.set_title('初期値$x_0 = 0.1$のときのロジスティック写像の分岐図')
         self.ax1.set_xlabel('$r$')
         self.ax1.set_ylabel('$x_n$')
         for i in range(len(self.r)):
@@ -51,8 +56,7 @@ class Ctest4():
                 self.ax1.scatter(result[1], result[0],  color='b', s=1)
 
     def code_problem2(self):
-        self.ax2.set_title('初期値$x_0 = 0.1$のときのロジスティック写像の分岐図',
-                           fontname="MS Gothic")
+        self.ax2.set_title('初期値$x_0 = 0.1$のときのロジスティック写像の分岐図')
         self.ax2.set_xlabel('$r$')
         self.ax2.set_ylabel('$x_n$')
         for i in range(len(self.r2)):
