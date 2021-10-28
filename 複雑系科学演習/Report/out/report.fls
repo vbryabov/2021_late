@@ -138,6 +138,20 @@ INPUT extractbb -B cropbox -O images/Problem2/ctest3_6.png
 OUTPUT out/week3.aux
 INPUT week3.tex
 INPUT week3.tex
+INPUT images/Problem3/report4_1.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_1.png
+INPUT images/Problem3/report4_2.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_2.png
+INPUT images/Problem3/report4_3.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_3.png
+INPUT images/Problem3/report4_4.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_4.png
+INPUT images/Problem3/report4_5.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_5.png
+INPUT images/Problem3/report4_6.png
+INPUT extractbb -B cropbox -O images/Problem3/report4_6.png
+INPUT images/Problem3/ctest4.png
+INPUT extractbb -B cropbox -O images/Problem3/ctest4.png
 OUTPUT out/week4.aux
 INPUT week4.tex
 INPUT week4.tex
