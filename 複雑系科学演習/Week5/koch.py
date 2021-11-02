@@ -1,7 +1,7 @@
 import math
 import matplotlib
 from matplotlib import pyplot as plt
-import numpy
+import numpy as np
 
 # 日本語フォント用（Linux）
 matplotlib.rc('font', family='Noto Sans CJK JP')
