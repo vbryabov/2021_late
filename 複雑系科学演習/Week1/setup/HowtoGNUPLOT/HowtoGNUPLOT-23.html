@@ -1,0 +1,50 @@
+<html>
+<title>How to use GNUPLOT: 14</title>
+<body>
+<b>カレントディレクトリの変更方法</b><br>
+<!--<font color="maroon"><b>How to change the current directory.</b></font>-->
+<hr><p>
+起動時にGNUPLOTがデータファイルを参照できるディレクトリはショートカットの｢作業フォルダ」に設定した場所である。<br>
+次の例では<tt> C:\home\ECS1 </tt>となる。<br>
+<!--<font color="maroon">The initial current directory is give as the working directory in the property window of GNUPLOT icon.<br>
+In the following example, <tt>C:\home\ECS1</tt> is the initial current directory when you run GNUPLOT.</font>--><p>
+<img src="imgs/dir-1.gif"><p>
+
+カレントディレクトリ(=パス指定無しでファイルを参照出来るフォルダ)を確認するには<tt> pwd </tt>とする。<br>
+<!--<font color="maroon"><tt>pwd</tt> command without any arguments shows where the current directory is.</font>--><p>
+<img src="imgs/dir-2.gif"><p>
+この例では<tt>C:\home\ECS1</tt>と表示され、起動時は確かに｢作業フォルダ」欄の指定通りである。<br>
+<!--<font color="maroon">The above example shows the current directory is <tt>C:\home\ECS1</tt>, which is certainly given as working directory.</font>--><p>
+
+この状態で、例えば<tt>C:\home\ECS1\1st</tt>内にあるデータファイル<tt>Lorenz.txt</tt>のグラフを描こうとしても<br>
+次のようにパスを指定しなければファイルを読むことはできない。<br>
+<!--<font color="maroon">In order to plot the data file <tt>Lorenz.txt</tt> which is in <tt>C:\home\ECS1\1st</tt>,<br>
+you have to write the path to that data file, since that is not in the current directory.</font>--><p>
+<img src="imgs/dir-3.gif"><p>
+この例では1回目のパス指定のない<tt>splot</tt>はエラーとなり、2回目の<tt>splot</tt>で正しく描画される。<br>
+<b>注意：</b>ディレクトリ名の区切りには、円マーク<tt> \ </tt>ではなくスラッシュ<tt> / </tt>を用いること。<br>
+<!--<font color="maroon">1st example of <tt>splot</tt> without path fails, and 2nd one plots the graph correctly.</br>
+<b>Note:</b> You need to use <tt>/</tt>, not yen symbol <tt>\</tt>, as a separator for directory notation.</font>--><p>
+
+次の例のように、パス指定には絶対パス(=ドライブ名から始めて全て記述する)も
+相対パス(=カレントディレクトリから見た相対位置を記述する)も利用できる。<br>
+<!--<font color="maroon">You can describe the location of data file by either absolute path or relative path notations.</font>--><p> 
+<img src="imgs/dir-4.gif"><p>
+
+<tt>C:\home\ECS1</tt>内にあるサブディレクトリ(フォルダ)<tt>1st</tt>にカレントディレクトリを移動させるには<tt> cd </tt>コマンドを使う。<br>
+<!--<font color="maroon">You can move current directory to <tt>1st</tt> in <tt>C:\home\ECS1</tt> by <tt>cd</tt> command.</font>--><p>
+<tt>cd "1st"</tt><br>
+<tt>cd "C:/home/ECS1/1st"</tt><p>
+相対パス指定(上)・絶対パス指定(下)のどちらでもよい。一つ上のディレクトリへは相対パス記法である <tt>".."</tt> を使う。<br>
+<b>注意：</b>ダブルクォーテションでパス名を括ること。<br>
+<!--<font color="maroon">Both relative and absolute path notations are available.
+To move the current directory into the above one, you can use <tt>".."</tt> symbol as relative path notation.<br>
+<b>Note:</b> double quotation symbol is necessary at the head and the end of path name.</font>--><p>
+
+次の例は絶対パス指定でカレントディレクトリを移動して、<tt>pwd</tt> コマンドで移動を確認したところ。<br>
+<!--<font color="maroon">In the following, the current directory is changed in accordance with the given absolute path, and then <tt>pwd</tt> shows the changed state.</font>--><p>
+<img src="imgs/dir-5.gif"><p>
+
+<a href="HowtoGNUPLOT-22.html">前へ(prev.)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</html>

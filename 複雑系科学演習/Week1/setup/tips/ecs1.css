@@ -1,0 +1,49 @@
+H1 {
+	background:#6B8E23; 
+	color:white;
+	padding:2px;
+	font-size:medium;
+	font-weight:normal;
+}
+H2 {
+	color:#6B8E23
+}
+H3 {
+	color:#6B8E23
+}
+H4 {
+	margin-left:15px; 
+	color:#6B8E23
+}
+SPAN{
+	color:blue;
+	font-weight: bold;
+}
+PRE {
+	width:50%;
+	background-color: #f2ffe8;
+	border:1px solid gray;
+	margin:12px; 
+	margin-left:3em;
+	padding:5px;
+}
+BLOCKQUOTE{
+	background-color: #FFE4C4;
+	font-size:smaller;
+	padding:3px;
+}
+p {
+	padding-left:2em;
+} 
+div{
+	width:80%;
+	margin-left:2em;
+   	border:1px solid gray;
+        background-color:#F5DEB3;
+}
+table{
+	margin-left:5%; 
+}
+
+
+

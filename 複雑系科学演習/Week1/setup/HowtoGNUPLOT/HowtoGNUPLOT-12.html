@@ -1,0 +1,39 @@
+<html>
+<title>How to GNUPLOT: 9</title>
+<body>
+9. 縦軸を対数目盛りで表示することも出来る。
+次のset命令で縦軸を対数モードにする。<br>
+<!--<font color="maroon">Logarithmic scale is of course available for the ordinate.</font>--><p>
+<tt> set log y</tt><p>
+ここで、<tt>plot [-1:1][0.1:10] exp(x) </tt>を実行するとグラフは直線で表示される。<br>
+<!--<font color="maroon">Running <tt>plot [-1:1][0.1:10] exp(x)</tt>, you will see the straight line.</font>--><p>
+<img src="imgs/plot-10.gif"><p>
+確かに縦軸は対数目盛りだ。<br>
+<b>応用問題：</b>表示された直線の傾きはいくらか。<br>
+<!--<font color="maroon">This means the ordinate scale is surely logarithmic.<br>
+<b>applied question:</b> Deduce the slope of the line displayed here.</font>--><p>
+
+対数方眼紙のように縦軸の目盛を方眼表示させてみる。<br>
+縦軸の小目盛も方眼表示するには、次のようにモードセットする。<br>
+<!--<font color="maroon">You can display like logarithmic paper with setting the grid mode as the following.</font>--><p>
+<tt>set grid ytics mytics</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/plot-11.gif"><p>
+対数モードから通常の線形(リニア)モードに戻すには、<br>
+<!--<font color="maroon">If you want to return to the linear scale, turn off the logarithmic mode.</font>--><p>
+<tt>set nolog y</tt><br>
+<tt>plot [-1:1] exp(x)</tt><p>
+<img src="imgs/plot-09.gif"><p>
+フーリエ解析した結果の表示など、横軸を対数目盛にしたい場合は<br>
+<!--<font color="maroon">To set the logarithmic mode for the abscissa, for example in order to show results of FFT, type the following.</font>--><p>
+<tt> set log x </tt>とすればよい。<p>
+
+  <hr>
+  <h3>TIPS</h3>
+<p>グラフウィンドウをアクティブにして、'l' を押しても対数メモリモード（縦軸のみ）の On/Off が切り替わる。</p>
+
+<hr>
+
+<a href="HowtoGNUPLOT-11.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-13.html">次へ(next)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</html>

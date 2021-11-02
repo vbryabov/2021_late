@@ -1,0 +1,17 @@
+<html>
+<title>How to use GNUPLOT: 14</title>
+<body>
+14. ２次元のグラフに話題を戻す。<br>
+<!--<font color="maroon">Now we will return to 2-dim. graph.</font>--><p>
+GNUPLOTでは、データファイルからの読み込みデータと関数のグラフを同時に描くことが出来る。<br>
+次の例を試してみよう。<br>
+<!--<font color="maroon">GNUPLOT can display data plot and function graph simultaneously. Try the following</font>--><p> 
+<tt>plot [0:10] "Lorenz.txt" using 1:2 with lines, 5*sin(x)</tt><p>
+<img src="imgs/Lorenz-gp13.gif"><p>
+複雑に変化するローレンツ方程式のX(t)と、単調な正弦関数の波形が一つの横軸に対して同時に描画されている。<br>
+この機能を使うと、例えば測定値と理論式の結果を同時に描いて比較検討することが出来る。<br>
+<!--<font color="maroon">You will see the plot of X(t) of Lorenz's eq. and the simple sinusoidal curve.<br>
+In this way, for example, you can compare your experimental results and theoretical answers.</font>--><p>
+<a href="HowtoGNUPLOT-16.5.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-18.html">次へ(next)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</html>

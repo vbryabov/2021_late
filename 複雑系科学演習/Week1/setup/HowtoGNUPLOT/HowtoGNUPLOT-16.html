@@ -1,0 +1,75 @@
+<html>
+<title>How to use GNUPLOT: 13</title>
+<body>
+13. ローレンツ方程式はX(t), Y(t), Z(t)の３変数の時間発展で対流現象の複雑さを模したものだ。<br>
+<!--<font color="maroon">Lorenz' equation system shows time evolution of three variables<br>
+which models the complex manner of convection phenomena.</font>--><p>
+GNUPLOTにはこれまでに学んだ２次元のグラフ描画に加えて、３次元空間中に軌道を描く命令も用意されている。<br>
+<!--<font color="maroon">GNUPLOT can display trajectories in 3-dimensional space in addtion to create 2-dim. graphs.</font>--><p>
+<tt>set xlabel "X(t)"<br>
+set ylabel "Y(t)"<br>
+set zlabel "Z(t)"<br>
+splot "Lorenz.txt" using 2:3:4 with lines </tt>を実行してみよう。<br>
+この " using 2:3:4"オプションは、x軸に2列目の、y軸に3列目の、z軸に4列目のデータを使用するように指定している。
+<!--<font color="maroon">Let us run the above.</font>--><p>
+<img src="imgs/Lorenz-gp10.gif"><p>
+見たことのあるカオスアトラクタが描かれたはずだ。<br>
+<!--<font color="maroon">You will see the chaos attractor which you have ever seen.</font>--><p>
+３次元表示出来ると、次にしたくなるのは色々な角度から眺めること･･･、<br>
+向こう側から見たら、あるいは上から見下ろしたら、･･･どのような眺めになるのだろう。<br>
+GNUPLOTでは眺める角度を自在に指定出来るし、角度を少しずつ変えながら画像データとして保存し、<br>
+それらを連結すればアニメーション表示すら可能だ。<br>
+<!--<font color="maroon">Then, you will think if you could see it from various view points. or varios directions.<br>
+You can freely set the direction of view. And you can create movie by storing plot for each view and<br>
+connecting with varing view direction.</font>--><p> 
+まず上から眺めてみよう。<br>
+<!--<font color="maroon">At first, let us try to see from the top.</font>--><p>
+<tt>set view 20,30<br>
+set grid<br>
+replot</tt><p>
+<img src="imgs/Lorenz-gp11.gif"><p>
+xy平面を表す格子を見ると、先ほどよりも高い角度から眺めていることが分かるだろう。<br>
+set view によるモード設定の１つ目の値は上下方向の眺める角度を指定するもので、<br>
+初期値は60度である。また0度でxy平面を真上から眺めることに相当する。<br>
+また<tt>set grid</tt>を用いるとxy平面上に格子を描く。<br>
+<!--<font color="maroon">You can understand your view point is higher than before<br>
+from the shape of the grid of xy-plane. The first argument of <tt>set view</tt> means<br>
+the angle of elevation.<br>
+Additionally we can put grid on xy-plane by <tt>set grid</tt> in 3D mode.</font>--><p>
+<tt>set view 0,30</tt> （真上 <font color="maroon">top view</font>）<br>
+<tt>set view 90,30</tt> （真横 <font color="maroon">horizontal view</font>）<p>
+などの設定を試してみると良い。0から180度までを指定できる。<br>
+<!--<font color="maroon">To try to the above settings is good to understand how to set view point.</font>--><p>
+<b>練習問題：</b>真下から眺めてみよ。<br>
+<!--<font color="maroon"><b>Exercise :</b> Display the bottom view.</font>--><p>
+次に眺める方角を変えて、向こう側から眺めてみよう。
+上下角は元の60度に戻して、2つ目の角度値を調整する。<br>
+<!--<font color="maroon">Next let us try to change the horizontal direction. Set 60deg. for elevation angle again.<br>
+And then we will adjust the second angle argument like the following.</font>--><p> 
+<tt>set view 60,210</tt><br>
+<tt>replot</tt><p>
+<img src="imgs/Lorenz-gp12.gif"><p>
+x軸やy軸の目盛の大小の向きが逆転していることに注意。<br>
+これは、180度回って反対側から眺めているためだ。<br>
+眺める方向は0度から360度の範囲で指定できる。<br>
+<!--<font color="maroon">You can see the scales of x and y are of opposite direction respectively.<br>
+Thus you are looking from the opposite side now. You can set the view direction from 0 to 360deg.</font>--><p>
+<b>応用問題：</b>３次元表示を応用して、XY平面上を(X(t),Y(t))が時間発展していく様子を描く図面を描画せよ。<br>
+ヒント：GNUPLOTのx軸を時間軸に取り、同y軸をX(t)、z軸をY(t)の表示に割り当てよ。<br>
+<!--<font color="maroon"><b>Applied question :</b> Display the time evolution of (X(t),Y(t)) on xy-plane, utilizing 3-dim. plot.<br>
+Hint: Take x-axis of GNUPLOT as time axis, y-axis as X(t), and z-axis as Y(t).</font>--><p>
+
+  <hr>
+  <h3>TIPS</h3>
+  <p>マウス左ボタンでドラッグしても視点を変えられる．<br>
+    Ctrl を押しながら回転させると，Quick Draw(軸のみが表示される) モードになる．</p>
+  <p>中ボタンの縦ドラッグでz軸拡大縮小，横ドラッグでグラフ全体拡大縮小．<br>
+    （3ボタンのマウスの場合．なくてももしかしたら左右同時押しでエミュレートできるかも？）
+  </p>
+  <hr>
+
+
+  <a href="HowtoGNUPLOT-15.html">前へ(prev.)</a>・<a href="HowtoGNUPLOT-16.5.html">次へ(next)</a>・<a href="Toc.html">目次へ(toc)</a>
+</body>
+</html>
+
