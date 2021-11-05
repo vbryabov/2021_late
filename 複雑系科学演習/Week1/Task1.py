@@ -1,12 +1,6 @@
 from matplotlib import pyplot as plt
-import matplotlib
 import numpy as np
-# 日本語フォント用（Linux）
-matplotlib.rc('font', family='Noto Sans CJK JP')
-'''
-# 日本語フォント用（Windows）
-matplotlib.rc('font', family='MS Gothic')
-'''
+
 
 class PlotLogisticGraph():
     def __init__(self, r, s) -> None:
@@ -15,7 +9,7 @@ class PlotLogisticGraph():
         self.s = s
         self.xn = np.linspace(0, 1, 1000)
         self.fig = plt.figure(figsize=(12, 6))
-        self.filepath = 'Week2/images/'
+        self.filepath = 'Week1/images/'
 
     def logistic(self) -> list:
         '''ロジスティック回帰の計算'''
@@ -26,23 +20,25 @@ class PlotLogisticGraph():
             x_array.append(calc_x)
         return x_array
 
-    def plot_delta_time_graph(self):
+    def plot_time_graph(self):
         '''時系列グラフの描画'''
         ax2 = self.fig.add_subplot(1, 2, 2)
         n = list(range(0, 101))
         ax2.plot(n, self.logistic()[:101])
-        ax2.set_title("$r = $" + str(self.r) + ", $x_0 = $" + str(self.x) + 'のときの時系列グラフ')
+        ax2.set_title("$r = $" + str(self.r) + ", $x_0 = $" +
+                      str(self.x) + 'のときの時系列グラフ')
         ax2.set_xlim(0, 100)
         ax2.set_ylim(0, 1)
         ax2.set_xlabel("$n$")
         ax2.set_ylabel("$x_n$")
 
-    def plot_delta_time_graph_only(self):
+    def plot_time_graph_only(self):
         '''時系列グラフの描画のみ'''
         self.fig = plt.figure(figsize=(6, 6))
         n = list(range(0, 101))
         plt.plot(n, self.logistic()[:101])
-        plt.title("$r = $" + str(self.r) + ", $x_0 = $" + str(self.x) + 'のときの時系列グラフ')
+        plt.title("$r = $" + str(self.r) + ", $x_0 = $" +
+                  str(self.x) + 'のときの時系列グラフ')
         plt.xlim(0, 100)
         plt.ylim(0, 1)
         plt.xlabel("$n$")
@@ -64,11 +60,12 @@ class PlotLogisticGraph():
             spiper_plot_x.append(n[i])
             spiper_plot_y.append(n[i])
             spiper_plot_y.append(n[i])
-        
+
         ax1.plot(spiper_plot_x, spiper_plot_y, marker='o', linestyle='dashed')
         ax1.plot(self.xn, self.xn)
         ax1.plot(self.xn, xn_array)
-        ax1.set_title("$r = $" + str(self.r) + ", $x_0 = $" + str(self.x) + 'のときのリターンマップ')
+        ax1.set_title("$r = $" + str(self.r) + ", $x_0 = $" +
+                      str(self.x) + 'のときのリターンマップ')
         ax1.set_xlim(0, 1)
         ax1.set_ylim(0, 1)
         ax1.set_xlabel("$x_n$")
@@ -89,11 +86,12 @@ class PlotLogisticGraph():
             spiper_plot_x.append(n[i])
             spiper_plot_y.append(n[i])
             spiper_plot_y.append(n[i])
-        
+
         plt.plot(spiper_plot_x, spiper_plot_y, marker='o', linestyle='dashed')
         plt.plot(self.xn, self.xn)
         plt.plot(self.xn, xn_array)
-        plt.title("$r = $" + str(self.r) + ", $x_0 = $" + str(self.x) + 'のときのリターンマップ')
+        plt.title("$r = $" + str(self.r) + ", $x_0 = $" +
+                  str(self.x) + 'のときのリターンマップ')
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         plt.xlabel("$x_n$")
@@ -118,5 +116,5 @@ for i in range(len(r)):
 
 for i in range(len(r)):
     for_report = PlotLogisticGraph(r[i], 'ctest2_{}'.format(i + 1))
-    for_report.plot_delta_time_graph_only()
+    for_report.plot_time_graph_only()
     for_report.plot_return_map_only()

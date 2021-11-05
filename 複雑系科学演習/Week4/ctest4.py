@@ -1,14 +1,7 @@
 from matplotlib import pyplot as plt
-import matplotlib
 import numpy as np
 import random
 
-# 日本語フォント用（Linux）
-matplotlib.rc('font', family='Noto Sans CJK JP')
-'''
-# 日本語フォント用（Windows）
-matplotlib.rc('font', family='MS Gothic')
-'''
 
 class Ctest4():
     def __init__(self) -> None:
@@ -18,8 +11,9 @@ class Ctest4():
         self.ax1 = fig.add_subplot(2, 1, 1)
         self.ax2 = fig.add_subplot(2, 1, 2)
 
-        # self.x = 0.1    # 初期値を0.1と仮定
+        # 初期値を[0, 1]でランダムにとる
         self.x = random.uniform(0, 1)
+
         # 固定点
         self.u1 = list(map(lambda x: 0, self.r))
         self.u2 = list(map(lambda x: 1 - 1 / x, self.r))
@@ -31,7 +25,7 @@ class Ctest4():
         self.lambda2 = list(map(lambda x: 2 - x, self.r))
         self.lambda3 = self.r2
         self.lambda4 = list(map(lambda x: 2 - x, self.r2))
-        
+
         self.filepath = "複雑系科学演習/Week4/images/"
 
     def proprocessing(self, r: float) -> list:
@@ -48,7 +42,8 @@ class Ctest4():
         return x_array, r_array
 
     def code_problem1(self):
-        self.ax1.set_title('初期値$x_0 = {}$（ランダム）のときのロジスティック写像の分岐図'.format(round(self.x, 3)))
+        self.ax1.set_title(
+            '初期値$x_0 = {}$（ランダム）のときのロジスティック写像の分岐図'.format(round(self.x, 3)))
         self.ax1.set_xlabel('$r$')
         self.ax1.set_ylabel('$x_n$')
         for i in range(len(self.r)):
@@ -61,7 +56,8 @@ class Ctest4():
                 self.ax1.scatter(result[1], result[0],  color='b', s=1)
 
     def code_problem2(self):
-        self.ax2.set_title('初期値$x_0 = {}$（ランダム）のときのロジスティック写像の分岐図'.format(round(self.x, 3)))
+        self.ax2.set_title(
+            '初期値$x_0 = {}$（ランダム）のときのロジスティック写像の分岐図'.format(round(self.x, 3)))
         self.ax2.set_xlabel('$r$')
         self.ax2.set_ylabel('$x_n$')
         for i in range(len(self.r2)):
@@ -81,7 +77,6 @@ class Ctest4():
         self.code_problem1()
         self.code_problem2()
         self.save_fig()
-
 
 
 class Report_3():
@@ -124,12 +119,12 @@ class Report_3():
             spiper_plot_x.append(n[i])
             spiper_plot_y.append(n[i])
             spiper_plot_y.append(n[i])
-        
+
         plt.plot(spiper_plot_x, spiper_plot_y, marker='o', linestyle='dashed')
         plt.plot(self.xn, self.xn)
         plt.plot(self.xn, xn_array)
-        plt.title("$r = $" + str(self.r) + ", $x_0 = $" + str(round(self.x, 3)) + '（ランダム）における\n' +\
-            '$x_n (150 < n < 200)$のときのリターンマップ')
+        plt.title("$r = $" + str(self.r) + ", $x_0 = $" + str(round(self.x, 3)) + '（ランダム）における\n' +
+                  '$x_n (150 < n < 200)$のときのリターンマップ')
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         plt.xlabel("$x_n$")
