@@ -82,6 +82,8 @@ class Ctest4():
         self.code_problem2()
         self.save_fig()
 
+
+
 class Report_3():
     def __init__(self, r: float, s: str) -> None:
         self.r = r
@@ -137,10 +139,11 @@ class Report_3():
 
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]
 
-demo = Ctest4()
-demo.do_plot()
-'''
+# レポート課題, 課題２
+# week_3 = Ctest4()
+# week_3.do_plot()
+
+# レポート課題, 課題１
 for i in range(len(r)):
-    demo = Report_3(r[i], "report4_{}".format(i + 1))
-    demo.plot_return_map()
-'''
+    report_3 = Report_3(r[i], "report4_{}".format(i + 1))
+    report_3.plot_return_map()

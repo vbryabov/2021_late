@@ -46,6 +46,14 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/jvlisting/jvlisting.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/jvlisting/jvlisting.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT out/report.aux
@@ -58,6 +66,8 @@ INPUT out/week3.aux
 INPUT out/week3.aux
 INPUT out/week4.aux
 INPUT out/week4.aux
+INPUT out/other_problem.aux
+INPUT out/other_problem.aux
 OUTPUT out/report.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
@@ -120,6 +130,18 @@ INPUT images/Problem1/ctest2_5_2.png
 INPUT extractbb -B cropbox -O images/Problem1/ctest2_5_2.png
 INPUT images/Problem1/ctest2_6_2.png
 INPUT extractbb -B cropbox -O images/Problem1/ctest2_6_2.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm
 OUTPUT out/week2.aux
 INPUT week2.tex
 INPUT week2.tex
@@ -155,6 +177,15 @@ INPUT extractbb -B cropbox -O images/Problem3/ctest4.png
 OUTPUT out/week4.aux
 INPUT week4.tex
 INPUT week4.tex
+OUTPUT out/other_problem.aux
+INPUT other_problem.tex
+INPUT other_problem.tex
+INPUT images/OtherProblem/ctest5_1.png
+INPUT extractbb -B cropbox -O images/OtherProblem/ctest5_1.png
+INPUT images/OtherProblem/ctest5_2.png
+INPUT extractbb -B cropbox -O images/OtherProblem/ctest5_2.png
+INPUT images/OtherProblem/ctest5_3.png
+INPUT extractbb -B cropbox -O images/OtherProblem/ctest5_3.png
 INPUT out/report.aux
 INPUT out/week1.aux
 INPUT out/week1.aux
@@ -164,3 +195,5 @@ INPUT out/week3.aux
 INPUT out/week3.aux
 INPUT out/week4.aux
 INPUT out/week4.aux
+INPUT out/other_problem.aux
+INPUT out/other_problem.aux

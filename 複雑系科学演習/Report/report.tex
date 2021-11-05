@@ -2,7 +2,26 @@
 \usepackage[dvipdfm]{graphicx}
 \usepackage{otf}
 \usepackage{amsmath}
-
+\usepackage{listings,jvlisting} %日本語のコメントアウトをする場合jvlisting（もしくはjlisting）が必要
+%ここからソースコードの表示に関する設定
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
 \title{複雑系科学演習} % タイトルを決める作業
 \begin{document} % 文書の始まり
 \author{複雑系知能学科　複雑系コース　３年　Iクラス番号1019086　岩上慎之介}
@@ -13,4 +32,5 @@
 \include{week2}
 \include{week3}
 \include{week4}
+\include{other_problem}
 \end{document}
