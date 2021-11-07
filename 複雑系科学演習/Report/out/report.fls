@@ -177,6 +177,10 @@ INPUT extractbb -B cropbox -O images/Problem3/ctest4.png
 OUTPUT out/week4.aux
 INPUT week4.tex
 INPUT week4.tex
+INPUT images/Problem4/task4_1.png
+INPUT extractbb -B cropbox -O images/Problem4/task4_1.png
+INPUT images/Problem4/task4_2.png
+INPUT extractbb -B cropbox -O images/Problem4/task4_2.png
 OUTPUT out/other_problem.aux
 INPUT other_problem.tex
 INPUT other_problem.tex

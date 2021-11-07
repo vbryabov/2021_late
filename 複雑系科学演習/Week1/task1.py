@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-class PlotLogisticGraph():
+class Task1():
     def __init__(self, r, s) -> None:
         self.x = 0.7
         self.r = r
@@ -12,7 +12,7 @@ class PlotLogisticGraph():
         self.filepath = 'Week1/images/'
 
     def logistic(self) -> list:
-        '''ロジスティック回帰の計算'''
+        "ロジスティック回帰の計算"
         calc_x = self.x
         x_array = [calc_x]
         for n in range(1, 102):
@@ -20,8 +20,8 @@ class PlotLogisticGraph():
             x_array.append(calc_x)
         return x_array
 
-    def plot_time_graph(self):
-        '''時系列グラフの描画'''
+    def plot_time_graph(self) -> None:
+        "時系列グラフの描画"
         ax2 = self.fig.add_subplot(1, 2, 2)
         n = list(range(0, 101))
         ax2.plot(n, self.logistic()[:101])
@@ -32,8 +32,8 @@ class PlotLogisticGraph():
         ax2.set_xlabel("$n$")
         ax2.set_ylabel("$x_n$")
 
-    def plot_time_graph_only(self):
-        '''時系列グラフの描画のみ'''
+    def plot_time_graph_only(self) -> None:
+        "時系列グラフの描画のみ"
         self.fig = plt.figure(figsize=(6, 6))
         n = list(range(0, 101))
         plt.plot(n, self.logistic()[:101])
@@ -45,8 +45,8 @@ class PlotLogisticGraph():
         plt.ylabel("$x_n$")
         plt.savefig(self.filepath + self.s + '_1', dpi=300)
 
-    def plot_return_map(self):
-        '''リターンマップの描画'''
+    def plot_return_map(self) -> None:
+        "リターンマップの描画"
         ax1 = self.fig.add_subplot(1, 2, 1)
         xn_array = []
         for i in self.xn:
@@ -71,8 +71,8 @@ class PlotLogisticGraph():
         ax1.set_xlabel("$x_n$")
         ax1.set_ylabel("$x_{n+1}$")
 
-    def plot_return_map_only(self):
-        '''リターンマップの描画のみ'''
+    def plot_return_map_only(self) -> None:
+        "リターンマップの描画のみ"
         self.fig = plt.figure(figsize=(6, 6))
         xn_array = []
         for i in self.xn:
@@ -108,13 +108,12 @@ class PlotLogisticGraph():
 
 
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]
-
 for i in range(len(r)):
-    demo = PlotLogisticGraph(r[i], 'ctest2_{}'.format(i + 1))
+    demo = Task1(r[i], 'ctest2_{}'.format(i + 1))
     demo.do_plot()
     demo.show_graph()
 
 for i in range(len(r)):
-    for_report = PlotLogisticGraph(r[i], 'ctest2_{}'.format(i + 1))
+    for_report = Task1(r[i], 'ctest2_{}'.format(i + 1))
     for_report.plot_time_graph_only()
     for_report.plot_return_map_only()

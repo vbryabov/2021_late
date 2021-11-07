@@ -4,6 +4,8 @@
   \centering
   \includegraphics[keepaspectratio, scale=0.8]{images/OtherProblem/ctest5_1.png}
 \end{figure}
+解説：\\
+今回はPythonを用いて複素数の計算を簡略化しマンデルブロ集合をプロットした。まず、$a, b$ それぞれの範囲での漸化式を計算し、それを複素数平面上にプロットした。\\
 \begin{lstlisting}[caption=mandelbrot.py]
   import numpy as np
   import matplotlib
@@ -63,7 +65,8 @@
   \centering
   \includegraphics[keepaspectratio, scale=0.8]{images/OtherProblem/ctest5_2.png}
 \end{figure}
-
+解説：\\
+ジュリア集合はマンデルブロ集合と似たような集合である。マンデルブロ集合では、$z_0 = 0$ として $c$ を変化させてきたがジュリア集合は逆の $c$ を固定し $z_0$ を変化させていく集合である。\\
 \begin{lstlisting}[caption=julia.py]
   import numpy as np
   from matplotlib import pyplot as plt
@@ -128,7 +131,8 @@
   \centering
   \includegraphics[keepaspectratio, scale=0.8]{images/OtherProblem/ctest5_3.png}
 \end{figure}
-
+解説：\\
+このコッホ曲線を描くためのソースコードは、コッホ曲線の座標を任意の繰り返し回数で再帰し求める関数を作った。その座標の配列をもとにPythonのmatplotlibを用いてプロットした。\\
 \begin{lstlisting}[caption=koch.py]
   import math
   import matplotlib

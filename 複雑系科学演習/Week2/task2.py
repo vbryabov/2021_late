@@ -8,7 +8,7 @@ matplotlib.rc('font', family='Noto Sans CJK JP')
 matplotlib.rc('font', family='MS Gothic')
 '''
 
-class Ctest3():
+class Task2():
     def __init__(self, r: float, file_name: str, index: int) -> None:
         self.r = r
         self.file_name = file_name
@@ -19,7 +19,7 @@ class Ctest3():
         self.ax2 = fig.add_subplot(1, 2, 2)
 
     def code_problem1(self) -> None:
-        '''課題１について処理をしている関数'''
+        "課題１について処理をしている関数"
         ax1_array = []
         for i in self.x:
             num = i
@@ -36,7 +36,7 @@ class Ctest3():
         self.ax1.legend(loc='best')
 
     def code_problem2(self) -> None:
-        '''課題２について処理をしている関数'''
+        "課題２について処理をしている関数"
         ax2_array = []
         x_array = []
         for i in self.x:
@@ -62,7 +62,7 @@ class Ctest3():
 
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]
 for i in range(len(r)):
-    demo = Ctest3(r[i], 'task2_{}'.format(i + 1), i + 1)
+    demo = Task2(r[i], 'task2_{}'.format(i + 1), i + 1)
     demo.code_problem1()
     demo.code_problem2()
     demo.show_graph()
