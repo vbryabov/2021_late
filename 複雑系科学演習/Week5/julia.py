@@ -43,7 +43,7 @@ n_max = 100
 a = -1
 b = 0.1
 z = julia(x, y, n_max, a, b)
-file_path = "複雑系科学演習/Week6/images/"
+file_path = "複雑系科学演習/Week5/images/"
 plt.figure(figsize=(8, 8))
 plt.xlabel('$x$')
 plt.ylabel('$y$')
@@ -51,5 +51,5 @@ plt.title("$-2 \leqq x \leqq 2, -2 \leqq y \leqq 2$ のとき、\n" +\
     "$a = ${0}, $b = ${1}のときの Julia 集合".format(round(a, 3), round(b, 3)))
 
 plt.imshow(z, cmap='seismic', norm=Normalize(vmin=0, vmax=n_max), extent=[-2, 2, -2, 2])
-plt.savefig(file_path + "ctest5_2", dpi=300)
+plt.savefig(file_path + "task4_2", dpi=300)
 plt.show()

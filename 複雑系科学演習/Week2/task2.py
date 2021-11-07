@@ -55,14 +55,14 @@ class Ctest3():
         self.ax2.legend(loc='best')
 
     def show_graph(self) -> None:
-        file_path = 'Week3/images/'
+        file_path = '複雑系科学演習/Week2/images/'
         plt.savefig(file_path + self.file_name, dpi=300)
-        plt.show()
+        # plt.show()
 
 
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]
 for i in range(len(r)):
-    demo = Ctest3(r[i], 'ctest3_{}'.format(i + 1), i + 1)
+    demo = Ctest3(r[i], 'task2_{}'.format(i + 1), i + 1)
     demo.code_problem1()
     demo.code_problem2()
     demo.show_graph()

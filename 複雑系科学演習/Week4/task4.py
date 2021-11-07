@@ -3,7 +3,12 @@ from matplotlib import pyplot as plt
 from matplotlib import colors
 import numpy as np
 from math import log
-
+# 日本語フォント用（Linux）
+matplotlib.rc('font', family='Noto Sans CJK JP')
+'''
+# 日本語フォント用（Windows）
+matplotlib.rc('font', family='MS Gothic')
+'''
 
 class LyapunovExponent():
 
@@ -74,7 +79,7 @@ class LyapunovExponent():
         self.ax2.set_ylabel('LyapunovExponent')
 
     def save_fig(self):
-        file_path = '複雑系科学演習/Week5/ctest5'
+        file_path = '複雑系科学演習/Week4/images/task4'
         plt.savefig(file_path, dpi=300)
         plt.show()
 

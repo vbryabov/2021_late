@@ -1,7 +1,13 @@
 from matplotlib import pyplot as plt
 import numpy as np
+import matplotlib
 import random
-
+# 日本語フォント用（Linux）
+matplotlib.rc('font', family='Noto Sans CJK JP')
+'''
+# 日本語フォント用（Windows）
+matplotlib.rc('font', family='MS Gothic')
+'''
 
 class Ctest4():
     def __init__(self) -> None:
@@ -26,7 +32,7 @@ class Ctest4():
         self.lambda3 = self.r2
         self.lambda4 = list(map(lambda x: 2 - x, self.r2))
 
-        self.filepath = "複雑系科学演習/Week4/images/"
+        self.filepath = "複雑系科学演習/Week3/images/task3"
 
     def proprocessing(self, r: float) -> list:
         '''グラフに入れるための前処理'''
@@ -70,7 +76,7 @@ class Ctest4():
                 self.ax2.scatter(result[1], result[0],  color='b', s=1)
 
     def save_fig(self):
-        plt.savefig(self.filepath + 'ctest4', dpi=300)
+        plt.savefig(self.filepath, dpi=300)
         plt.show()
 
     def do_plot(self):
@@ -85,7 +91,7 @@ class Report_3():
         self.s = s
         self.x = random.uniform(0, 1)
         self.xn = np.linspace(0, 1, 1000)
-        self.filepath = "複雑系科学演習/Week4/images/"
+        self.filepath = "複雑系科学演習/Week3/images/"
 
     def logistic(self, x: float, cnt: int) -> list:
         num = x
@@ -135,8 +141,8 @@ class Report_3():
 r = [1.50, 2.60, 3.20, 3.50, 3.86, 3.90]
 
 # レポート課題, 課題２
-# week_3 = Ctest4()
-# week_3.do_plot()
+week_3 = Ctest4()
+week_3.do_plot()
 
 # レポート課題, 課題１
 for i in range(len(r)):

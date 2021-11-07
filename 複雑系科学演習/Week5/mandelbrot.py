@@ -40,11 +40,11 @@ def mandelbrot(a, b, n_max):
 a = np.linspace(-2, 2, 2000)
 b = np.linspace(-2, 2, 2000)
 z = mandelbrot(a, b, 100)
-file_path = "複雑系科学演習/Week6/images/"
+file_path = "複雑系科学演習/Week5/images/"
 plt.figure(figsize=(8, 8))
 plt.xlabel('$a$')
 plt.ylabel('$b$')
 plt.title("$-2 \leqq a \leqq 2, -2 \leqq b \leqq 2$ のときの Mandelbrot 集合")
 plt.imshow(z, cmap='jet', norm=Normalize(vmin=0, vmax=100), extent=[-2, 2, -2, 2])
-plt.savefig(file_path + "ctest5_1", dpi=300)
+plt.savefig(file_path + "task4_1", dpi=300)
 plt.show()

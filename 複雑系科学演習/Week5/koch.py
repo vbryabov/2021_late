@@ -47,11 +47,11 @@ koch_array_y = [p1[1]]
 koch(n, p1, p2)
 koch_array_x.append(p2[0])
 koch_array_y.append(p2[1])
-file_path = "複雑系科学演習/Week6/images/"
+file_path = "複雑系科学演習/Week5/images/"
 plt.figure(figsize=(8, 8))
 plt.title("{}回繰り返したときの $[-1, 1]$ 間のコッホ曲線".format(n))
 plt.xlim(-1, 1)
 plt.ylim(-1, 1)
 plt.plot(koch_array_x, koch_array_y)
-plt.savefig(file_path + "ctest5_3", dpi=300)
+plt.savefig(file_path + "task4_3", dpi=300)
 plt.show()
