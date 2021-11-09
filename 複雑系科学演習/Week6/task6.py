@@ -18,7 +18,7 @@ class Task6():
         "リターンマップでのテント写像の座標を持つ配列を返す"
         calc_x = self.x
         x_array = [calc_x]
-        for _ in range(1, 102):
+        for _ in range(100):
             if 0 <= calc_x <= 0.5:
                 calc_x = 2 * calc_x
             else:
@@ -41,13 +41,16 @@ class Task6():
 
         plt.plot(spiper_plot_x, spiper_plot_y, marker='o',
                  linestyle='dashed', color='black', alpha=0.7)
-        plt.plot(self.xn, self.xn, color='green', alpha=0.9)
-        plt.plot(self.xn, self.tent_y, color='red', alpha=0.9)
+        plt.plot(self.xn, self.xn, color='green',
+                 alpha=0.9, label="$x_{n+1} = x_n$")
+        plt.plot(self.xn, self.tent_y, color='red',
+                 alpha=0.9, label="Tent map")
         plt.title("Return map of \"Tent map\", $x_0 = $" + str(self.x))
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         plt.xlabel("$x_n$")
         plt.ylabel("$x_{n+1}$")
+        plt.legend(loc='best')
         plt.savefig(self.filepath, dpi=300)
 
 
