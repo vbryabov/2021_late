@@ -33,6 +33,5 @@ class Week7Task4():
         plt.legend(loc='best')
         plt.savefig('複雑系科学演習/Week7/images/tast7_4')
 
-
 task = Week7Task4()
 task.code_problem4()

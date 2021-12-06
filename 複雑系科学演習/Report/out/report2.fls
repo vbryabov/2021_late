@@ -60,6 +60,12 @@ INPUT out/report2.aux
 INPUT out/report2.aux
 INPUT out/week6.aux
 INPUT out/week6.aux
+INPUT out/week7.aux
+INPUT out/week7.aux
+INPUT out/week8.aux
+INPUT out/week8.aux
+INPUT out/week9.aux
+INPUT out/week9.aux
 OUTPUT out/report2.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
@@ -113,6 +119,36 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
+OUTPUT out/week7.aux
+INPUT week7.tex
+INPUT week7.tex
+INPUT images/Problem7/task7_1.png
+INPUT extractbb -B cropbox -O images/Problem7/task7_1.png
+INPUT images/Problem7/tast7_2.png
+INPUT extractbb -B cropbox -O images/Problem7/tast7_2.png
+INPUT images/Problem7/tast7_3.png
+INPUT extractbb -B cropbox -O images/Problem7/tast7_3.png
+INPUT images/Problem7/tast7_4.png
+INPUT extractbb -B cropbox -O images/Problem7/tast7_4.png
+OUTPUT out/week8.aux
+INPUT week8.tex
+INPUT week8.tex
+INPUT images/Problem8/task8_1.png
+INPUT extractbb -B cropbox -O images/Problem8/task8_1.png
+INPUT images/Problem8/task8_2.png
+INPUT extractbb -B cropbox -O images/Problem8/task8_2.png
+OUTPUT out/week9.aux
+INPUT week9.tex
+INPUT week9.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT images/Problem9/task9.png
+INPUT extractbb -B cropbox -O images/Problem9/task9.png
 INPUT out/report2.aux
 INPUT out/week6.aux
 INPUT out/week6.aux
+INPUT out/week7.aux
+INPUT out/week7.aux
+INPUT out/week8.aux
+INPUT out/week8.aux
+INPUT out/week9.aux
+INPUT out/week9.aux
