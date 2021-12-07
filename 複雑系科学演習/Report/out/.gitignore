@@ -1,0 +1,16 @@
+*.log
+*.blg
+*.log
+*.toc
+*.dvi
+*.bbl
+*.orig
+*.aux
+*.bb
+*.xbb
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*-eps-converted-to.pdf
+sample.pdf
