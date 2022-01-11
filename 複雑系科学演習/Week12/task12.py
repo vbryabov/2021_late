@@ -42,25 +42,38 @@ class HenonMap():
 
     def add_log(self):
         distance = self.calculate_distances()
-        U = []
-        W = []
+        U = []  # Uk = log(lk)
+        W = []  # Wk = log[C(lk)]
         for k in range(200):
-            U.append(0.01 * k + 0.005)
+            U.append(log(0.01 * k + 0.005))
         for C in distance:
             if C > 0:  # log(i) ; i > 0
                 W.append(log(C))
         return U, W
 
-    def plot_henon_map(self):
+    def plot_c(self):
+        r = []
+        for k in range(200):
+            r.append(0.01 * k + 0.005)
+        C = self.calculate_distances()
+        plt.figure(figsize=(10, 8), facecolor='lightgray')
+        plt.title('Dependence $C$ and $r$')
+        plt.plot(r, C, color='black')
+        plt.xlabel('$r$')
+        plt.ylabel('$C$')
+        plt.savefig('複雑系科学演習/Week12/task12_1', dpi=300)
+
+    def plot_log_c(self):
         U = self.add_log()[0]
         W = self.add_log()[1]
         plt.figure(figsize=(10, 8), facecolor='lightgray')
         plt.title('Dependence $W$ and $U$')
-        plt.plot(U, W, color='black')
+        plt.plot(U, W, color='black', linestyle='none', marker='o')
         plt.xlabel('$U$')
         plt.ylabel('$W$')
-        plt.savefig('複雑系科学演習/Week12/task12', dpi=300)
+        plt.savefig('複雑系科学演習/Week12/task12_2', dpi=300)
 
 
 task12 = HenonMap()
-task12.plot_henon_map()
+task12.plot_c()
+task12.plot_log_c()
