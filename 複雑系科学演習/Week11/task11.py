@@ -42,7 +42,7 @@ class HenonMap():
         plt.title('Histogram about "Henon map" distances')
         plt.xlabel('$h(i),0 \leq i < 200 $')
         plt.ylabel('Count of h(i)')
-        plt.savefig('task11', dpi=300)
+        plt.savefig('複雑系科学演習/Week11/task11', dpi=300)
 
 
 task11 = HenonMap()
