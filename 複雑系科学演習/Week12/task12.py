@@ -1,5 +1,5 @@
 from matplotlib import pyplot as plt
-from math import floor, log
+from math import log
 
 
 class HenonMap():
@@ -24,6 +24,8 @@ class HenonMap():
                 continue
             x_array.append(self.x)
             y_array.append(self.y)
+        print(x_array[:10])
+        print(y_array[:10])
         return x_array, y_array
 
     def calculate_distances(self) -> list:
